@@ -1,23 +1,20 @@
-test_average (__main__.TestExercice) ... FAIL
+test_average (__main__.TestExercice) ... ERROR
 test_to_celsius (__main__.TestExercice) ... FAIL
 test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... FAIL
 test_to_radians (__main__.TestExercice) ... FAIL
 
 ======================================================================
-FAIL: test_average (__main__.TestExercice)
+ERROR: test_average (__main__.TestExercice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_exercice.py", line 26, in test_average
-    'Mauvais calcul de la moyenne'
-AssertionError: Lists differ: [None, None, None] != [4.0, 0.0, -2.3333333333333335]
-
-First differing element 0:
-None
-4.0
-
-- [None, None, None]
-+ [4.0, 0.0, -2.3333333333333335] : Mauvais calcul de la moyenne
+  File "test_exercice.py", line 20, in test_average
+    output = [exercice.average(*v) for v in values]
+  File "test_exercice.py", line 20, in <listcomp>
+    output = [exercice.average(*v) for v in values]
+  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 9, in average
+    return math.mean(a, b, c)
+AttributeError: module 'math' has no attribute 'mean'
 
 ======================================================================
 FAIL: test_to_celsius (__main__.TestExercice)
@@ -73,16 +70,19 @@ FAIL: test_to_radians (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 43, in test_to_radians
     'Mauvais calcul de degres -> radians'
-AssertionError: Lists differ: [0.0, 0.0, 0.0, 0.0] != [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748]
+AssertionError: Lists differ: [<built-in function radians>, <built-in fu[69 chars]ans>] != [-0.08668468618238503, 0.17598251810595048[32 chars]2748]
 
 First differing element 0:
-0.0
+<built-in function radians>
 -0.08668468618238503
 
-- [0.0, 0.0, 0.0, 0.0]
-+ [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748] : Mauvais calcul de degres -> radians
++ [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748]
+- [<built-in function radians>,
+-  <built-in function radians>,
+-  <built-in function radians>,
+-  <built-in function radians>] : Mauvais calcul de degres -> radians
 
 ----------------------------------------------------------------------
 Ran 5 tests in 0.002s
 
-FAILED (failures=5)
+FAILED (failures=4, errors=1)
