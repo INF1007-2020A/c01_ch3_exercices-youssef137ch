@@ -12,7 +12,7 @@ Traceback (most recent call last):
     output = [exercice.average(*v) for v in values]
   File "test_exercice.py", line 20, in <listcomp>
     output = [exercice.average(*v) for v in values]
-  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 9, in average
+  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 8, in average
     return sum(a, b, c) / len(a, b, c)
 TypeError: sum expected at most 2 arguments, got 3
 
@@ -24,7 +24,7 @@ Traceback (most recent call last):
     output = [exercice.to_radians(*v) for v in values]
   File "test_exercice.py", line 37, in <listcomp>
     output = [exercice.to_radians(*v) for v in values]
-  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 13, in to_radians
+  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 12, in to_radians
     return math.radians(angle_degs, angle_mins/60, angle_secs/3600)
 TypeError: radians() takes exactly one argument (3 given)
 
