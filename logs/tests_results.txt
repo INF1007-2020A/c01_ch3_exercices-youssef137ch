@@ -1,20 +1,8 @@
-test_average (__main__.TestExercice) ... ERROR
+test_average (__main__.TestExercice) ... ok
 test_to_celsius (__main__.TestExercice) ... ok
 test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... ok
 test_to_radians (__main__.TestExercice) ... ERROR
-
-======================================================================
-ERROR: test_average (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 20, in test_average
-    output = [exercice.average(*v) for v in values]
-  File "test_exercice.py", line 20, in <listcomp>
-    output = [exercice.average(*v) for v in values]
-  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 8, in average
-    return  (a + b + c)/ len(a, b, c)
-TypeError: len() takes exactly one argument (3 given)
 
 ======================================================================
 ERROR: test_to_radians (__main__.TestExercice)
@@ -49,4 +37,4 @@ First differing element 0:
 ----------------------------------------------------------------------
 Ran 5 tests in 0.002s
 
-FAILED (failures=1, errors=2)
+FAILED (failures=1, errors=1)
