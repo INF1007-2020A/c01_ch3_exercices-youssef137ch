@@ -25,7 +25,7 @@ Traceback (most recent call last):
   File "test_exercice.py", line 37, in <listcomp>
     output = [exercice.to_radians(*v) for v in values]
   File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 13, in to_radians
-    return math.radians(angle_degs, angle_mins/60, angle_secs/2)
+    return math.radians(angle_degs, angle_mins/60, angle_secs/3600)
 TypeError: radians() takes exactly one argument (3 given)
 
 ======================================================================
@@ -49,13 +49,16 @@ FAIL: test_to_degrees (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 62, in test_to_degrees
     'Mauvais calcul de radians -> degres'
-AssertionError: Lists differ: [(0.0, 0.0, 0.0), (0.0, 0.0, 0.0), (0.0, 0.[20 chars]0.0)] != [(79.0980174562859, 5.881047377154118, 29.6[197 chars]998)]
+AssertionError: Lists differ: [<built-in function degrees>, <built-in fu[69 chars]ees>] != [(79.0980174562859, 5.881047377154118, 29.[198 chars]998)]
 
 First differing element 0:
-(0.0, 0.0, 0.0)
+<built-in function degrees>
 (79.0980174562859, 5.881047377154118, 29.612494192724625)
 
-- [(0.0, 0.0, 0.0), (0.0, 0.0, 0.0), (0.0, 0.0, 0.0), (0.0, 0.0, 0.0)]
+- [<built-in function degrees>,
+-  <built-in function degrees>,
+-  <built-in function degrees>,
+-  <built-in function degrees>]
 + [(79.0980174562859, 5.881047377154118, 29.612494192724625),
 +  (-278.1960349125718, 48.23790524569176, 0.7750116145507491),
 +  (257.74504364071475, -15.297381557114704, 44.031235481811564),
