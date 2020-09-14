@@ -13,8 +13,8 @@ Traceback (most recent call last):
   File "test_exercice.py", line 20, in <listcomp>
     output = [exercice.average(*v) for v in values]
   File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 9, in average
-    return math.mean(a, b, c)
-AttributeError: module 'math' has no attribute 'mean'
+    return mean(a, b, c)
+NameError: name 'mean' is not defined
 
 ======================================================================
 ERROR: test_to_radians (__main__.TestExercice)
