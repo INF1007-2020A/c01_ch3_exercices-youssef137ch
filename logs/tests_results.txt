@@ -2,19 +2,7 @@ test_average (__main__.TestExercice) ... ok
 test_to_celsius (__main__.TestExercice) ... ok
 test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... ok
-test_to_radians (__main__.TestExercice) ... ERROR
-
-======================================================================
-ERROR: test_to_radians (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 37, in test_to_radians
-    output = [exercice.to_radians(*v) for v in values]
-  File "test_exercice.py", line 37, in <listcomp>
-    output = [exercice.to_radians(*v) for v in values]
-  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 12, in to_radians
-    return math.radians(angle_degs) + math.radians(angle_mins / 60) + math.radians(angle_secs / py3600)
-NameError: name 'py3600' is not defined
+test_to_radians (__main__.TestExercice) ... FAIL
 
 ======================================================================
 FAIL: test_to_degrees (__main__.TestExercice)
@@ -34,7 +22,25 @@ First differing element 0:
 +  (257.74504364071475, -15.297381557114704, 44.031235481811564),
 +  (213.95544569810457, -2.673258113725865, 23.057550624127998)] : Mauvais calcul de radians -> degres
 
+======================================================================
+FAIL: test_to_radians (__main__.TestExercice)
 ----------------------------------------------------------------------
-Ran 5 tests in 0.002s
+Traceback (most recent call last):
+  File "test_exercice.py", line 43, in test_to_radians
+    'Mauvais calcul de degres -> radians'
+AssertionError: Lists differ: [-0.0[13 chars]503, 0.17598251810595045, 6.283490739798685, 6.997344948274799] != [-0.0[13 chars]503, 0.17598251810595048, 6.283490739798685, 6.9973449482748]
 
-FAILED (failures=1, errors=1)
+First differing element 1:
+0.17598251810595045
+0.17598251810595048
+
++ [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748]
+- [-0.08668468618238503,
+-  0.17598251810595045,
+-  6.283490739798685,
+-  6.997344948274799] : Mauvais calcul de degres -> radians
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (failures=2)
