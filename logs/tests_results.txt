@@ -2,7 +2,7 @@ test_average (__main__.TestExercice) ... ERROR
 test_to_celsius (__main__.TestExercice) ... FAIL
 test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... FAIL
-test_to_radians (__main__.TestExercice) ... FAIL
+test_to_radians (__main__.TestExercice) ... ERROR
 
 ======================================================================
 ERROR: test_average (__main__.TestExercice)
@@ -15,6 +15,18 @@ Traceback (most recent call last):
   File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 9, in average
     return math.mean(a, b, c)
 AttributeError: module 'math' has no attribute 'mean'
+
+======================================================================
+ERROR: test_to_radians (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 37, in test_to_radians
+    output = [exercice.to_radians(*v) for v in values]
+  File "test_exercice.py", line 37, in <listcomp>
+    output = [exercice.to_radians(*v) for v in values]
+  File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 13, in to_radians
+    return math.radians(angle_degs, angle_mins)
+TypeError: radians() takes exactly one argument (2 given)
 
 ======================================================================
 FAIL: test_to_celsius (__main__.TestExercice)
@@ -64,25 +76,7 @@ First differing element 0:
 - [0.0, 0.0, 0.0]
 + [32.0, -13.0, 843.8000000000001] : Mauvais calcul de celsius -> farenheit
 
-======================================================================
-FAIL: test_to_radians (__main__.TestExercice)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 43, in test_to_radians
-    'Mauvais calcul de degres -> radians'
-AssertionError: Lists differ: [<built-in function radians>, <built-in fu[69 chars]ans>] != [-0.08668468618238503, 0.17598251810595048[32 chars]2748]
+Ran 5 tests in 0.001s
 
-First differing element 0:
-<built-in function radians>
--0.08668468618238503
-
-+ [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748]
-- [<built-in function radians>,
--  <built-in function radians>,
--  <built-in function radians>,
--  <built-in function radians>] : Mauvais calcul de degres -> radians
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.002s
-
-FAILED (failures=4, errors=1)
+FAILED (failures=3, errors=2)
