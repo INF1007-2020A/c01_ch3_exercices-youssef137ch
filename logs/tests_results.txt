@@ -13,8 +13,8 @@ Traceback (most recent call last):
   File "test_exercice.py", line 20, in <listcomp>
     output = [exercice.average(*v) for v in values]
   File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 8, in average
-    return sum(a, b, c) / len(a, b, c)
-TypeError: sum expected at most 2 arguments, got 3
+    return  (a + b + c)/ len(a, b, c)
+TypeError: len() takes exactly one argument (3 given)
 
 ======================================================================
 ERROR: test_to_radians (__main__.TestExercice)
