@@ -25,8 +25,8 @@ Traceback (most recent call last):
   File "test_exercice.py", line 37, in <listcomp>
     output = [exercice.to_radians(*v) for v in values]
   File "/home/runner/work/c01_ch3_exercices-youssef137ch/c01_ch3_exercices-youssef137ch/exercice.py", line 13, in to_radians
-    return math.radians(angle_degs, angle_mins)
-TypeError: radians() takes exactly one argument (2 given)
+    return math.radians(angle_degs, angle_mins/60, angle_secs/2)
+TypeError: radians() takes exactly one argument (3 given)
 
 ======================================================================
 FAIL: test_to_celsius (__main__.TestExercice)
